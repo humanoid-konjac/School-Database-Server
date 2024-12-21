@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSD-Scores</title>
+	<link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+	<a href="/">
+		<h1 class="title-div">CMY School Database</h1>
+	</a>
+	
+	<form class="search-form" action="/scorebystudent" method="get">
+		<input type="text" name="stu_id" class="search-input" placeholder="Enter Student ID">
+		<button type="submit" class="search-button">Search Student</button>
+	</form>
+	<form class="search-form" action="/scorebycourse" method="get">
+		<input type="text" name="course_id" class="search-input" placeholder="Enter Course ID">
+		<button type="submit" class="search-button">Search Course</button>
+	</form>
+	
+	<h2>Student Score Information</h2>
+	<div class="info">
+		<p><span class="label">ID:</span>&nbsp;{{id}}</p>
+		<p><span class="label">Name:</span>&nbsp;{{name}}</p>
+		<p><span class="label">Age:</span>&nbsp;{{age}}</p>
+		<p><span class="label">Sex:</span>&nbsp;{{sex}}</p>
+	</div>
+	<h2>Scores</h2>
+	<table>
+	<tr><td>Course ID</td><td>Course Name</td><td>Score</td><td>Time</td><td>Location</td><td>Teacher</td></tr>
+	{{scores-arr}}
+	</table>
+</body>
+
+</html>

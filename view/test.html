@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+	<h1>Request Info</h1>
+	<p>
+	{{method}}&nbsp;{{path}}&nbsp;{{protocol}}
+	{{if host}}</br>Host:&nbsp;{{host}}{{/if}}
+	{{if user-agent}}</br>User-Agent:&nbsp;{{user-agent}}{{/if}}
+	{{if accept}}</br>Accept:&nbsp;{{accept}}{{/if}}
+	{{if accept-language}}</br>Accept-Language:&nbsp;{{accept-language}}{{/if}}
+	{{if accept-encoding}}</br>Accept-Encoding:&nbsp;{{accept-encoding}}{{/if}}
+	{{if authorization}}</br>Authorization:&nbsp;{{authorization}}{{/if}}
+	{{if origin}}</br>Origin:&nbsp;{{origin}}{{/if}}
+	{{if connection}}</br>Connection:&nbsp;{{connection}}{{/if}}
+	{{if referer}}</br>Referer:&nbsp;{{referer}}{{/if}}
+	</p>
+	<img src="/public/images/xxx.png">
+</body>
+
+</html>

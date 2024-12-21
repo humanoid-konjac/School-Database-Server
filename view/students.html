@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSD-Students</title>
+	<link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+	<a href="/">
+		<h1 class="title-div">CMY School Database</h1>
+	</a>
+	<form class="search-form" action="/scorebystudent" method="get">
+		<input type="text" name="stu_id" class="search-input" placeholder="Enter Student ID">
+		<button type="submit" class="search-button">Search Student</button>
+	</form>
+	<form class="search-form" action="/scorebycourse" method="get">
+		<input type="text" name="course_id" class="search-input" placeholder="Enter Course ID">
+		<button type="submit" class="search-button">Search Course</button>
+	</form>
+
+	<h2>Students Information</h2>
+
+	<form class="filter-form" action="/students" method="get">
+		<input type="number" name="agefrom" id="ageFrom" class="filter-input" placeholder="Age From">
+		<input type="number" name="ageto" id="ageTo" class="filter-input" placeholder="Age To">
+		<button type="submit" class="filter-button">Filter</button>
+	</form>
+
+	<p>Age:&nbsp;{{age-range}}</p>
+	<table>
+	<tr><td>ID</td><td>Name</td><td>Age</td><td>Sex</td></tr>
+	{{stu-arr}}
+	</table>
+</body>
+
+</html>

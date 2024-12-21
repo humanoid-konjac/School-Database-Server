@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSD-Scores</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="title-div">CMY School Database</h1>
+    </a>
+    
+    <form class="search-form" action="/scorebystudent" method="get">
+		<input type="text" name="stu_id" class="search-input" placeholder="Enter Student ID">
+		<button type="submit" class="search-button">Search Student</button>
+	</form>
+	<form class="search-form" action="/scorebycourse" method="get">
+		<input type="text" name="course_id" class="search-input" placeholder="Enter Course ID">
+		<button type="submit" class="search-button">Search Course</button>
+	</form>
+    
+    <h2>Course Score Information</h2>
+
+    <div class="info">
+        <p><span class="label">ID:</span>&nbsp;{{id}}</p>
+        <p><span class="label">Name:</span>&nbsp;{{name}}</p>
+        <p><span class="label">Time:</span>&nbsp;{{time}}</p>
+        <p><span class="label">Location:</span>&nbsp;{{location}}</p>
+        <p><span class="label">Teacher:</span>&nbsp;{{teacher}}</p>
+    </div>
+    <h2>Scores</h2>
+
+    <form class="filter-form" action="/scorebycourse/{{id}}" method="get">
+		<input type="number" name="scorefrom" id="scoreFrom" class="filter-input" placeholder="Score From">
+		<input type="number" name="scoreto" id="scoreTo" class="filter-input" placeholder="Score To">
+		<button type="submit" class="filter-button">Filter</button>
+	</form>
+    <p>Score:&nbsp;{{score-range}}</p>
+    <table>
+    <tr><td>Student ID</td><td>Name</td><td>Score</td><td>Age</td><td>Sex</td></tr>
+    {{scores-arr}}
+    </table>
+</body>
+
+</html>

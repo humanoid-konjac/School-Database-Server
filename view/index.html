@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSD-Homepage</title>
+	<link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body>
+	<a href="/">
+		<h1 class="title-div">CMY School Database</h1>
+	</a>
+
+	<form class="search-form" action="/scorebystudent" method="get">
+		<input type="text" name="stu_id" class="search-input" placeholder="Enter Student ID">
+		<button type="submit" class="search-button">Search Student</button>
+	</form>
+	<form class="search-form" action="/scorebycourse" method="get">
+		<input type="text" name="course_id" class="search-input" placeholder="Enter Course ID">
+		<button type="submit" class="search-button">Search Course</button>
+	</form>
+
+	<p><a href='/students'>Students Data</a></p>
+	<p><a href='/courses'>Courses Data</a></p>
+	<p><a href='/test'>Test Page</a></p>
+</body>
+
+</html>
